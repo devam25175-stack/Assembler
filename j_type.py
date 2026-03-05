@@ -15,11 +15,14 @@ def j_type(PC, rd_name, offset):
     rd = format(reg_map[rd_name], "05b")
 
     imm21 = offset
+
+    # If number is negative then taking 2's compliment of it
     if(imm21 < 0):
         imm21 = (1 << 21) + imm21
 
-    imm_bits = format(imm21, "021b")  
+    imm_bits = format(imm21, "021b")    # Converting into 21 bits binary number
 
+    # Mandatory slicing of j type
     imm20     = imm_bits[0]
     imm10_1   = imm_bits[10:20]   
     imm11     = imm_bits[9]       
