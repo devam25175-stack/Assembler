@@ -1,28 +1,10 @@
 def r_type(unit, idx):
  # funct7 values for R-type instructions
-    funct7_map = {
-        "add":"0000000",
-        "sub":"0100000",
-        "sll":"0000000",
-        "slt":"0000000",
-        "sltu":"0000000",
-        "xor":"0000000",
-        "srl":"0000000",
-        "or":"0000000",
-        "and":"0000000"
-    }
+    funct7_map = {"add":"0000000","sub":"0100000","sll":"0000000","slt":"0000000",
+                  "sltu":"0000000","xor":"0000000","srl":"0000000","or":"0000000","and":"0000000"}
  # funct3 values select ALU operation
-    funct3_map = {
-        "add":"000",
-        "sub":"000",
-        "sll":"001",
-        "slt":"010",
-        "sltu":"011",
-        "xor":"100",
-        "srl":"101",
-        "or":"110",
-        "and":"111"
-    }
+    funct3_map = {"add":"000","sub":"000","sll":"001","slt":"010",
+                  "sltu":"011","xor":"100","srl":"101","or":"110","and":"111"}
 
     opcode = "0110011"       # opcode for all R-type instructions
  # R-type format must have 4 tokens
@@ -43,3 +25,4 @@ def r_type(unit, idx):
 
  # final 32-bit instruction layout
     return funct7 + rs2_bin + rs1_bin + funct3 + rd_bin + opcode
+
