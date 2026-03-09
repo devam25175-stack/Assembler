@@ -6,6 +6,7 @@ reg_map = {
 "s2":18,"s3":19,"s4":20,"s5":21,"s6":22,"s7":23,"s8":24,"s9":25,"s10":26,"s11":27,
 "t3":28,"t4":29,"t5":30,"t6":31
 }
+
 def s_type(unit, idx):
     if len(unit) != 3:  #syntax error check
         raise ValueError(f"Line {idx}: Invalid syntax")
